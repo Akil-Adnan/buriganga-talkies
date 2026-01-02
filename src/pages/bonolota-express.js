@@ -1,7 +1,7 @@
 // Importing Files
-import '../styles/base.css';
-import '../styles/movies.css';
-import '../main.js';
+import './styles/base.css';
+import './styles/movies.css';
+import './main.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import { renderLinks, renderSocialLinks, renderContactInfo, renderCast, renderCarousel, initScrollSpy, initSidebar, initVideoModal, initSectionVideos, setSectionBackgrounds } from "../main.js";

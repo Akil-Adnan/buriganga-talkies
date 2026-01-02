@@ -1,5 +1,6 @@
 {
   "name": "buriganga-talkies",
+  "homepage": "https://Akil-Adnan/buriganga-talkies",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +13,8 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-mpa": "^1.2.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
