@@ -1,0 +1,364 @@
+/* ---------------------------------- */
+/* ---------- HOME SECTION ---------- */
+/* ---------------------------------- */
+
+#home {
+    padding: 2rem;
+    padding-top: calc(2rem + var(--nav-height));
+}
+
+.movie-name {
+    width: min(30rem, 80vw);
+    height: auto;
+}
+
+.hero-video__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max(50rem, 100vh, 100dvh);
+  object-fit: cover; 
+  z-index: -1;       
+}
+
+.movie-inspiration {
+    font-family: var(--font-bengali-display);
+    font-weight: 700;
+    font-size: clamp(1.3rem, 3vw, 2.25rem);
+    letter-spacing: -2px;
+    color: var(--color-yellow);
+    -webkit-text-stroke-width: 1.8px;
+    -webkit-text-stroke-color: var(--color-crimson);
+}
+
+/* Home Scroll */
+.home__footer {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.home__social-links {
+    gap: var(--space-3);
+    padding: var(--space-1);
+}
+
+.home__social-links a {
+    font-size: var(--fs-h5);
+    transition: all 0.3s ease-in-out;
+    color: var(--color-ash-white);
+}
+
+.home__social-links a:hover,
+.home__social-links a:active {
+    color: var(--color-yellow);
+    transform: scale(1.05);
+}
+
+.scroll-text {
+    letter-spacing: 1rem;
+    font-weight: 300;
+    font-size: var(--fs-caption);
+    gap: var(--space-2);
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-text:hover {
+    transform: scale(1.015);
+}
+
+.scroll-text i {
+    font-size: var(--fs-body);
+}
+
+@media screen and (max-width: 576px) {
+    .scroll-text {
+        letter-spacing: 0;
+        gap: var(--space-1)
+    }
+
+    #home {
+        gap: 1rem;
+    }
+}
+
+
+/* ----------------------------------- */
+/* ---------- ABOUT SECTION ---------- */
+/* ----------------------------------- */
+
+/* Desktop Grid */
+.about__grid {
+    width: 100%;
+    height: calc(100% - 6rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Movie Grid Items */
+.about__poster, .about__content {
+    padding-bottom: var(--space-5); 
+    height: 100%;
+}
+
+/* Movie Poster */
+.about__image {
+    height: auto;
+    max-height: 560px;
+    max-width: 480px;
+    object-fit: contain;
+}
+
+/* Movie Title */
+.about__name {
+    margin-bottom: -5px;
+    font-family: var(--font-bengali);
+    margin-top: 0;
+}
+
+/* Movie Release Date */
+.about__release {
+    margin: 0;
+}
+
+/* Tablet Grid */
+@media screen and (max-width: 768px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .about__poster img {
+        width: min(300px, 60vw);
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+/* ---------------------------------- */
+/* ---------- CAST SECTION ---------- */
+/* ---------------------------------- */
+
+#cast {
+    /* height: 100vh; */
+    overflow-y: auto; 
+}
+
+.cast__grid {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    height: 90%;
+    padding-top: 30vh;
+}
+
+.cast__grid-left, .cast__grid-right {
+    position: relative;
+}
+
+.cast__grid-left h2 {
+    position: sticky;
+    font-size: 6vw;
+    padding-top: 10vh;
+    top: 20vh;
+}
+
+.cast__grid-right {
+    gap: var(--space-1);
+    align-items: center;
+    padding-bottom: 45vh;
+    
+}
+
+
+/* Cast card (Image) */
+.cast__card {
+    width: min(60vw, 100%);
+    aspect-ratio: 16 / 9;
+    position: sticky;
+    top: calc(20vh + 20px * var(--index));
+    background-color: var(--color-charcoal);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.cast__card-items {
+    position: relative;
+    height: 100%;
+}
+
+.cast__card-items h3 {
+    position: absolute;
+    z-index: 10;
+    bottom: 0%;
+    left: 0;
+    padding: var(--space-3);
+    font-family: var(--font-body);
+}
+
+.cast__card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: fill;
+    transition: transform 0.3s ease-out;
+    transform-origin: center center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #cast { height: auto; }
+
+    .cast__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .cast__grid { padding-top: 0;}
+
+    .cast__grid-left h2 { font-size: var(--fs-h2);}
+    
+    .cast__grid-right {
+        padding-bottom: 0;
+        gap: 0.6rem;
+    }
+
+    .cast__card {position: static;}
+
+    .cast__card-items h3 {
+        padding: var(--space-2);
+        font-size: var(--fs-body);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cast__card { width: 80vw; }
+}
+
+/* Hide Scrollbar */
+.hide-scrollbar {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Chrome / Safari / Edge */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+/* ------------------------------------- */
+/* ---------- GALLERY SECTION ---------- */
+/* ------------------------------------- */
+
+#gallery {
+    height: auto;
+    min-height: 60vh;
+    padding-bottom: 10rem;
+}
+
+#carouselContainer {
+    max-width: 100%; /* Fixed width of the carousel */
+    margin: 20px auto; /* Center the carousel */
+}
+.carousel-inner img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Fixed height */
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    #gallery {
+        min-height: auto;
+    }
+
+    .container-90 {
+        width: 90vw !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+/* ------------------------------------- */
+/* ---------- FOOTER SECTION ---------- */
+/* ------------------------------------- */
+
+#contact {
+    height: auto;
+    min-height: 60vh;
+}
+
+#contact {
+    background-color: var(--color-charcoal);
+}
+
+.contact__grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.contact__grid-left {
+    gap: 1rem;
+}
+
+.contact__grid-left img {
+    max-width: min(16vw, 200px);
+    height: auto;
+    object-fit: contain;
+}
+
+.contact__grid-left p {
+    max-width: 40vw;
+}
+
+.contact__info {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+/* Imported from JS */
+.footer-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    min-width: 250px;
+}
+
+.footer-item p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        min-height: auto;
+    }
+
+    .footer-item br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__info {
+        flex-direction: row;
+    }
+
+    .contact__grid p {
+        max-width: 90%;
+    }
+}
+
+
+
+
