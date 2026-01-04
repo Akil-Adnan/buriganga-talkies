@@ -19,10 +19,10 @@
     <title>Buriganga Talkies</title>
 
     <!-- Page JS entry point (imports shared JS + CSS) -->
-    <script type="module" crossorigin src="/buriganga-talkies/assets/bootstrap.bundle.min-CKrIriTd.js"></script>
-    <script type="module" crossorigin src="/buriganga-talkies/assets/utshob-J6kzNWan.js"></script>
-    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/bootstrap.bundle-Dl8To66s.css">
-    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/utshob-BRGLL9bI.css">
+    <script type="module" crossorigin src="/buriganga-talkies/assets/main-NChSuDhp.js"></script>
+    <link rel="modulepreload" crossorigin href="/buriganga-talkies/assets/bootstrap.bundle.min-BFZqQSOC.js">
+    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/bootstrap.bundle-D1-m9udm.css">
+    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/main-04Jjw3tg.css">
   </head>
   <body>
     <header>
@@ -61,11 +61,15 @@
       <!-- Home Section -->
       <section id="home" class="center-col">
         <!-- Movie Inspiration Name -->
-        <h3 class="movie-inspiration">তানিম নূর এর ছায়াছবি</h3>
+        <!-- <h3 class="movie-inspiration">তানিম নূর এর ছায়াছবি</h3>
         <a href="bonolota-express.html">Bonolota Express</a>
-        <a href="utshob.html">Utshob</a>
+        <a href="utshob.html">Utshob</a> -->
         <!-- Movie Title -->
-        <img class="movie-name" src="/buriganga-talkies/assets/utshob/name.png" alt="Utshob" />
+        <img
+          class="movie-name"
+          src="/buriganga-talkies/assets/buriganga-talkies/name.png"
+          alt="Utshob"
+        />
         <div class="home__footer">
           <!-- Home Social Links -->
           <div class="home__social-links center-row" id="homeSocialLinks"></div>
@@ -81,14 +85,14 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="background">
+      <!-- <section id="about" class="background">
         <div class="container">
           <h2>Overview</h2>
           <div class="about__grid">
             <div class="about__poster center-col">
               <img
                 class="about__image"
-                src="/buriganga-talkies/assets/common/cover-utshob.webp"
+                src="/assets/common/cover-utshob.webp"
                 alt="Poster photo"
               />
             </div>
@@ -130,10 +134,42 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
+      <!-- Movies Section -->
+      <section id="movies">
+        <div class="container">
+          <div class="movies__flex">
+            <div class="movies__grid-left justify-col"><h2>MOVIES</h2></div>
+            <!-- <div class="movies__grid-right"> -->
+            <div class="scroll-wrapper">
+              <div class="scroll-content">
+                <div class="movie__card">
+                  <img src="/buriganga-talkies/assets/common/cover-bonolota.webp" alt="" />
+                  <h3>Bonolota Express</h3>
+                  <a href="bonolota-express.html"
+                    ><button class="display__button btn-stretch">
+                      <span>Learn More</span>
+                    </button></a
+                  >
+                </div>
+                <div class="movie__card">
+                  <img src="/buriganga-talkies/assets/common/cover-utshob.webp" alt="" />
+                  <h3>Utshob</h3>
+                  <a href="utshob.html"
+                    ><button class="display__button btn-stretch">
+                      <span>Learn More</span>
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </section>
       <!-- Cast Section -->
-      <section id="cast" class="hide-scrollbar background">
+      <section id="crew" class="hide-scrollbar background">
         <div class="container">
           <div class="cast__grid">
             <div class="cast__grid-left flex-col">
