@@ -18,10 +18,10 @@
     <title>Buriganga Talkies</title>
 
     <!-- Page JS entry point (imports shared JS + CSS) -->
-    <script type="module" crossorigin src="/buriganga-talkies/assets/main-CV7xJUl6.js"></script>
+    <script type="module" crossorigin src="/buriganga-talkies/assets/main-C0sES5gc.js"></script>
     <link rel="modulepreload" crossorigin href="/buriganga-talkies/assets/bootstrap.bundle.min-ImymQZ6L.js">
     <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/bootstrap.bundle-C1yQWRn6.css">
-    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/main-WFFgQOp8.css">
+    <link rel="stylesheet" crossorigin href="/buriganga-talkies/assets/main-Brlk0rID.css">
   </head>
   <body>
     <header>
@@ -115,6 +115,11 @@
                   id="bonolota-express-trailer">
                   <span>Watch Trailer</span>
                 </button>
+                <button
+                  class="display__button btn-stretch"
+                  onclick="alertUnavailable()">
+                  <span>Watch Now</span>
+                </button>
                 <a href="https://www.imdb.com/title/tt38792109/"
                   ><button class="display__button btn-stretch">
                     <span>View in IMDb</span>
@@ -134,6 +139,11 @@
                 <button class="display__button btn-stretch" id="utshob-trailer">
                   <span>Watch Trailer</span>
                 </button>
+                <a href="https://www.chorki.com/movie/utshob"
+                  ><button class="display__button btn-stretch">
+                    <span>Watch Now</span>
+                  </button></a
+                >
                 <a href="https://www.imdb.com/title/tt37034643"
                   ><button class="display__button btn-stretch">
                     <span>View in IMDb</span>
@@ -231,4 +241,9 @@
       </div>
     </section>
   </body>
+  <script>
+    function alertUnavailable() {
+      alert("Sorry, this movie is not available to watch online yet.");
+    }
+  </script>
 </html>
